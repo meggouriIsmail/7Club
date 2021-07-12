@@ -31,11 +31,20 @@ namespace _7Club
         {
             this.listView1 = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
             this.listView3 = new System.Windows.Forms.ListView();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.games = new System.Windows.Forms.PictureBox();
+            this.jus = new System.Windows.Forms.PictureBox();
+            this.cafe = new System.Windows.Forms.PictureBox();
+            this.gaz = new System.Windows.Forms.PictureBox();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.games)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cafe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gaz)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -60,16 +69,6 @@ namespace _7Club
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // listView2
-            // 
-            this.listView2.AutoArrange = false;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(12, 12);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(532, 174);
-            this.listView2.TabIndex = 3;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
             // listView3
             // 
             this.listView3.AutoArrange = false;
@@ -79,6 +78,7 @@ namespace _7Club
             this.listView3.Size = new System.Drawing.Size(532, 280);
             this.listView3.TabIndex = 4;
             this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.Click += new System.EventHandler(this.listView3_Click);
             // 
             // checkBox1
             // 
@@ -111,20 +111,82 @@ namespace _7Club
             this.label2.TabIndex = 8;
             this.label2.Text = "AHMAD";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.games);
+            this.groupBox1.Controls.Add(this.jus);
+            this.groupBox1.Controls.Add(this.cafe);
+            this.groupBox1.Controls.Add(this.gaz);
+            this.groupBox1.Location = new System.Drawing.Point(12, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(532, 173);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // games
+            // 
+            this.games.Image = global::_7Club.Properties.Resources.games;
+            this.games.Location = new System.Drawing.Point(341, 19);
+            this.games.Name = "games";
+            this.games.Size = new System.Drawing.Size(101, 71);
+            this.games.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.games.TabIndex = 12;
+            this.games.TabStop = false;
+            this.games.Click += new System.EventHandler(this.games_Click);
+            // 
+            // jus
+            // 
+            this.jus.Image = global::_7Club.Properties.Resources.JUS;
+            this.jus.Location = new System.Drawing.Point(234, 20);
+            this.jus.Name = "jus";
+            this.jus.Size = new System.Drawing.Size(101, 71);
+            this.jus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.jus.TabIndex = 10;
+            this.jus.TabStop = false;
+            this.jus.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // cafe
+            // 
+            this.cafe.Image = global::_7Club.Properties.Resources.café;
+            this.cafe.Location = new System.Drawing.Point(127, 20);
+            this.cafe.Name = "cafe";
+            this.cafe.Size = new System.Drawing.Size(101, 71);
+            this.cafe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cafe.TabIndex = 11;
+            this.cafe.TabStop = false;
+            this.cafe.Click += new System.EventHandler(this.cafe_Click);
+            // 
+            // gaz
+            // 
+            this.gaz.Image = global::_7Club.Properties.Resources.boissanGAZ;
+            this.gaz.Location = new System.Drawing.Point(21, 20);
+            this.gaz.Name = "gaz";
+            this.gaz.Size = new System.Drawing.Size(101, 71);
+            this.gaz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gaz.TabIndex = 0;
+            this.gaz.TabStop = false;
+            this.gaz.Click += new System.EventHandler(this.gaz_Click);
+            // 
             // Consomation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 484);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.listView3);
-            this.Controls.Add(this.listView2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Name = "Consomation";
             this.Text = "Consomation";
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.games)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cafe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gaz)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,10 +196,14 @@ namespace _7Club
 
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox gaz;
+        private System.Windows.Forms.PictureBox jus;
+        private System.Windows.Forms.PictureBox cafe;
+        private System.Windows.Forms.PictureBox games;
     }
 }
